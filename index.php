@@ -47,3 +47,16 @@ if (file_exists($file)) {
     http_response_code(404);
     include __DIR__ . '/pages/404.php';
 }
+
+
+$page = $_GET['page'] ?? 'home';
+
+$allowed_pages = ['home', 'cars', 'contact', 'about'];
+
+if (in_array($page, $allowed_pages)) {
+    include $page . '.php';
+} else {
+
+    include '404.php';
+}
+?>
