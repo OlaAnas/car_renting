@@ -1,10 +1,12 @@
 <?php
 session_start();
-require "database/connection.php";
+require "../database/connection.php";
 
 $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
 $password = $_POST["password"];
 $confirm_password = $_POST["confirm-password"];
+
+$_SESSION['email'] = $email;
 
 if ($password === $confirm_password) {
     $check_account = $conn->prepare("SELECT * FROM account WHERE email = :email");
@@ -12,7 +14,7 @@ if ($password === $confirm_password) {
     $check_account->execute();
 
     if ($check_account->rowCount() === 0) {
-        //Extra hoge cost om nog beter te beveiligen
+        // Encrypt password with high cost
         $options = ['cost' => 14];
         $encrypted_password = password_hash($password, PASSWORD_DEFAULT, $options);
 
@@ -22,17 +24,16 @@ if ($password === $confirm_password) {
         $create_account->execute();
 
         $_SESSION["success"] = "Registratie is gelukt, log nu in:";
-        header("Location: /login-form");
+        unset($_SESSION["email"]);
+        header("Location: ../pages/login-form.php");
         exit();
     } else {
         $_SESSION["message"] = "Dit e-mailadres is al in gebruik.";
-        $_SESSION["email"] = htmlspecialchars($email);
-        header("Location: /register-form");
+        header("Location: ../pages/register-form.php");
         exit();
     }
 } else {
     $_SESSION["message"] = "Wachtwoorden komen niet overeen.";
-    $_SESSION["email"] = htmlspecialchars($email);
-    header("Location: register-form.php");
+    header("Location: ../pages/register-form.php");
     exit();
 }
