@@ -1,17 +1,17 @@
 <?php require "includes/header.php" ?>
-
+ 
 <?php
 //TODO: Implementeer dat de pagina de juiste auto laat zien op basis van de query paramater 'name'
 //$name = $_GET['name'] ?? null;
-
+ 
 //if ($name) {
 //    echo "Toon details van auto met naam: " . htmlspecialchars($name);
 //} else {
 //    echo "Geen auto opgegeven.";
 //}
-
-
-
+ 
+ 
+ 
 ?>
 <main class="car-detail">
     <div class="grid">
@@ -43,10 +43,10 @@
                     <div class="row"><span class="font-weight-bold">€80,00</span> / dag</div>
                     <div class="row"><a href="" class="button-primary">Huur nu</a></div>
                 </div>
-
+ 
             </div>
         </div>
     </div>
 </main>
-
+ 
 <?php require "includes/footer.php" ?>
