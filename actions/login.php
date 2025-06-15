@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $_SESSION['email'] = $email;
 
     if (empty($email) || empty($password)) {
-        $_SESSION['error'] = "Gelieve alle velden in te vullen."; // Please fill in all fields
+        $_SESSION['error'] = "Gelieve alle velden in te vullen."; // Please fill in all fields.
         header("Location: ../pages/login-form.php");
         exit;
     }
