@@ -479,4 +479,8 @@ footer .footer-links .links ul a {
   margin-bottom: 1em;
 }
 
+.hidden {
+    display: none;
+}
+
 /*# sourceMappingURL=main.css.map */
