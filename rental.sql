@@ -1,4 +1,3 @@
-
 CREATE TABLE `account` (
   `id` int NOT NULL,
   `email` varchar(255) NOT NULL,
@@ -16,3 +15,19 @@ ALTER TABLE `account`
   
 ALTER TABLE `account`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+CREATE TABLE `car` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `brand` varchar(100) NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `price_per_day` decimal(10,2) NOT NULL,
+  `description` text,
+  PRIMARY KEY (`id`)
+);
+
+-- Example data
+INSERT INTO `car` (`name`, `brand`, `image`, `price_per_day`, `description`) VALUES
+('Model S', 'Tesla', 'assets/images/products/car (0).svg', 120.00, 'A premium electric sedan.'),
+('Mustang', 'Ford', 'assets/images/products/car (1).svg', 90.00, 'A classic American muscle car.'),
+('Civic', 'Honda', 'assets/images/products/car (2).svg', 60.00, 'A reliable and efficient compact car.');

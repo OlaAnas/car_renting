@@ -14,11 +14,11 @@
                 <a href="#" class="button-primary">Huur een bedrijfswagen</a>
                 <img src="assets/images/car-rent-header-image-2.png" alt="">
                 <img src="assets/images/header-block-background.svg" alt="" class="background-header-element">
-
+ 
             </div>
         </div>
     </header>
-
+ 
     <main>
     <h2 class="section-title">Populaire auto's</h2>
     <div class="cars">
@@ -70,5 +70,5 @@
         <a class="button-primary" href="#">Toon alle</a>
     </div>
     </main>
-
+ 
 <?php require "includes/footer.php" ?>
