@@ -3,7 +3,7 @@ session_start();
 require "../includes/header.php";
 ?>
 <main>
-    <form action="../actions/register.php" method="post" class="account-form">
+    <form action="/car_renting/actions/register.php" method="post" class="account-form">
         <h2>Maak een account aan</h2>
 
         <?php if (isset($_SESSION['message'])): ?>
@@ -40,6 +40,18 @@ require "../includes/header.php";
             placeholder="Uw wachtwoord"
             required
         >
+        <!-- Full name -->
+<label for="full_name">Volledige naam</label>
+<input type="text" id="full_name" name="full_name" required>
+
+<!-- Phone number -->
+<label for="phone">Telefoonnummer</label>
+<input type="text" id="phone" name="phone">
+
+<!-- Address -->
+<label for="address">Adres</label>
+<textarea id="address" name="address"></textarea><br>
+
 
         <input type="submit" value="Maak account aan" class="button-primary">
     </form>

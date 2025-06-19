@@ -1,12 +1,7 @@
 <?php
 session_start();
-
-// Remove all session variables
-session_unset();
-
-// Destroy the session
-session_destroy();
-
-// Redirect to homepage
-header("Location: ../index.php");
-exit;
+$_SESSION = []; // Clear all session variables for security
+session_destroy(); // Destroy the session
+header("Location: /car_renting/pages/login-form.php"); // Redirect to login
+exit(); // Terminate script
+?>
