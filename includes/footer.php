@@ -1,4 +1,3 @@
-
 <footer>
     <div class="brand">
         <h2>Rydr.</h2>
@@ -11,12 +10,12 @@
                 <li><a href="/over-ons">Het team</a></li>
                 <li><a href="#">Onze visie</a></li>
                 <li><a href="#">Vacatures</a></li>
-            </ul> 
+            </ul>
         </div>
         <div class="links">
             <h3>Community</h3>
-            <ul> 
-                <li><a href="#">Events</a></li> 
+            <ul>
+                <li><a href="#">Events</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Podcast</a></li>
                 <li><a href="#">Invite a friend</a></li>
@@ -25,14 +24,15 @@
         <div class="links">
             <h3>Socials</h3>
             <ul>
-                <li><a href="#">Discord</a></li> 
+                <li><a href="#">Discord</a></li>
                 <li><a href="#">Instagram</a></li>
                 <li><a href="#">Twitter</a></li>
                 <li><a href="#">Facebook</a></li>
             </ul>
-        </div> 
+        </div>
     </div>
 </footer>
+
 <div class="legal-footer">
     <div class="legal">
         <div class="copyright">
@@ -43,10 +43,12 @@
         <ul>
             <li><a href="#">Privacy & Policy</a></li>
             <li><a href="#">Terms & Condition</a></li>
+            <li><a href="#" id="openLogin" class="button-primary">Inloggen</a></li>
         </ul>
-    </div> 
+    </div>
 </div>
-<div id="loginModal" class="modal hidden">
+
+<div id="loginModal" class="modal hidden" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="modal-content">
         <h2>Welkom bij Rydr</h2>
         <p>Kies hoe je verder wilt gaan:</p>
@@ -54,10 +56,10 @@
             <a href="/login-form" class="button-secondary">Inloggen</a>
             <a href="/register-form" class="button-primary">Account aanmaken</a>
         </div>
-        <button class="modal-close">&times;</button>
+        <button class="modal-close" aria-label="Sluit venster">&times;</button>
     </div>
-</div> 
-<script src="assets/javascript/main.js"></script>
+</div>
 
+<script src="assets/javascript/main.js"></script>
 </body>
 </html>

@@ -57,3 +57,12 @@ document.addEventListener('keydown', function(e) {
         closeModal();
     }
 });
+
+
+const openLoginBtn = document.getElementById('openLogin');
+if (openLoginBtn && modal) {
+    openLoginBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        openModal();
+    });
+}
