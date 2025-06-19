@@ -47,6 +47,7 @@ if (file_exists($file)) {
     http_response_code(404);
     include __DIR__ . '/pages/404.php';
 }
+<<<<<<< HEAD
 
 
 $page = $_GET['page'] ?? 'home';
@@ -93,3 +94,7 @@ if (file_exists($file)) {
 </div>
 
 <?php require "includes/footer.php"; ?>
+
+
+=======
+>>>>>>> ba5ba82c6c2fc8a71efb4616bc3db9de4b5f9d03

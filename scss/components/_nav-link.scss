@@ -1,0 +1,19 @@
+.nav a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5rem 0.75rem;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  transition: background 0.3s ease;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.05);
+    outline: none;
+  }
+}
+
+.nav a:focus {
+  outline: 2px solid var(--color-focus);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); 
+}
