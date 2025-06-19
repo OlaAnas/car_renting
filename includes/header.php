@@ -32,8 +32,8 @@ if (session_status() === PHP_SESSION_NONE) {
     <nav>
         <ul>
             <li><a href="/car_renting/pages/home.php">Home</a></li>
-            <li><a href="/ons-aanbod">Ons aanbod</a></li>
-            <li><a href="#">Hulp nodig?</a></li>
+            <li><a href="/car_renting/pages/ons-aanbod.php">Ons aanbod</a></li>
+            <li><a href="/car_renting/pages/over-ons.php">Hulp nodig?</a></li>
         </ul>
     </nav>
 
