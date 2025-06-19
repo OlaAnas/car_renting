@@ -1,4 +1,4 @@
-<?php require "includes/header.php" ?>
+<?php require_once __DIR__ . '/../includes/header.php'; ?>
 <main>
     <img src="/assets/images/banner.jpeg" alt="" width="1200">
     <h2>Over Rydr.</h2>
@@ -17,4 +17,4 @@
 </main>
 
 
-<?php require "includes/footer.php" ?>
+<?php require_once __DIR__ . '/../includes/footer.php'; ?>

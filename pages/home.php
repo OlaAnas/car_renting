@@ -40,7 +40,7 @@ try {
                         <?= htmlspecialchars($car['name']) ?>
                     </div>
                 </div>
-                <img src="/car_renting/<?= htmlspecialchars($car['image']) ?>" alt="<?= htmlspecialchars($car['name']) ?>">
+                <img src="<?= htmlspecialchars($car['image']) ?>" alt="<?= htmlspecialchars($car['name']) ?>">
                 <div class="car-specification">
                     <span><img src="assets/images/icons/gas-station.svg" alt="">?</span>
                     <span><img src="assets/images/icons/car.svg" alt="">?</span>
