@@ -1,4 +1,14 @@
-<?php require "includes/header.php" ?>
+<?php require_once __DIR__ . '/../includes/header.php'; ?>
+<?php
+require_once __DIR__ . '/../database/connection.php';
+
+try {
+    $stmt = $pdo->query("SELECT * FROM car LIMIT 8");
+    $cars = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (Exception $e) {
+    $cars = [];
+}
+?>
     <header>
         <div class="advertorials">
             <div class="advertorial">
@@ -22,26 +32,26 @@
     <main>
     <h2 class="section-title">Populaire auto's</h2>
     <div class="cars">
-        <?php for ($i = 0; $i <= 3; $i++) : ?>
+        <?php foreach ($cars as $car): ?>
             <div class="car-details">
                 <div class="car-brand">
-                    <h3>Koenigegg</h3>
+                    <h3><?= htmlspecialchars($car['brand']) ?></h3>
                     <div class="car-type">
-                        Sport
+                        <?= htmlspecialchars($car['name']) ?>
                     </div>
                 </div>
-                <img src="assets/images/products/car%20(<?= $i ?>).svg" alt="">
+                <img src="/car_renting/<?= htmlspecialchars($car['image']) ?>" alt="<?= htmlspecialchars($car['name']) ?>">
                 <div class="car-specification">
-                    <span><img src="assets/images/icons/gas-station.svg" alt="">90l</span>
-                    <span><img src="assets/images/icons/car.svg" alt="">Schakel</span>
-                    <span><img src="assets/images/icons/profile-2user.svg" alt="">2 Personen</span>
+                    <span><img src="assets/images/icons/gas-station.svg" alt="">?</span>
+                    <span><img src="assets/images/icons/car.svg" alt="">?</span>
+                    <span><img src="assets/images/icons/profile-2user.svg" alt="">?</span>
                 </div>
                 <div class="rent-details">
-                    <span><span class="font-weight-bold">€249,00</span> / dag</span>
-                    <a href="/car-detail" class="button-primary">Bekijk nu</a>
+                    <span><span class="font-weight-bold">€<?= number_format($car['price_per_day'], 2, ',', '.') ?></span> / dag</span>
+                    <a href="/car-detail?id=<?= $car['id'] ?>" class="button-primary">Bekijk nu</a>
                 </div>
             </div>
-        <?php endfor; ?>
+        <?php endforeach; ?>
     </div>
     <h2 class="section-title">Aanbevolen auto's</h2>
     <div class="cars">
@@ -71,4 +81,4 @@
     </div>
     </main>
  
-<?php require "includes/footer.php" ?>
+<?php require_once __DIR__ . '/../includes/footer.php'; ?>
