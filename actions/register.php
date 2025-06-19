@@ -9,7 +9,7 @@ $confirm_password = $_POST["confirm-password"];
 $_SESSION['email'] = $email;
 
 if ($password === $confirm_password) {
-    $check_account = $conn->prepare("SELECT * FROM account WHERE email = :email");
+    $check_account = $pdo->prepare("SELECT * FROM account WHERE email = :email");
     $check_account->bindParam(":email", $email);
     $check_account->execute();
 
@@ -18,7 +18,7 @@ if ($password === $confirm_password) {
         $options = ['cost' => 14];
         $encrypted_password = password_hash($password, PASSWORD_DEFAULT, $options);
 
-        $create_account = $conn->prepare("INSERT INTO account (email, password) VALUES (:email, :password)");
+        $create_account = $pdo->prepare("INSERT INTO account (email, password) VALUES (:email, :password)");
         $create_account->bindParam(":email", $email);
         $create_account->bindParam(":password", $encrypted_password);
         $create_account->execute();

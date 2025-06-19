@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit;
     }
 
-    $select_user = $conn->prepare("SELECT * FROM account WHERE email = :email");
+    $select_user = $pdo->prepare("SELECT * FROM account WHERE email = :email");
     $select_user->bindParam(":email", $email);
     $select_user->execute();
     $user = $select_user->fetch(PDO::FETCH_ASSOC);
