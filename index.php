@@ -48,6 +48,7 @@ if (file_exists($file)) {
     include __DIR__ . '/pages/404.php';
 }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 
 $page = $_GET['page'] ?? 'home';
@@ -94,6 +95,9 @@ if (file_exists($file)) {
 </div>
 
 <?php require "includes/footer.php"; ?>
+=======
+?>
+>>>>>>> Stashed changes
 =======
 ?>
 >>>>>>> Stashed changes
