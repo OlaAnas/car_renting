@@ -483,4 +483,65 @@ footer .footer-links .links ul a {
     display: none;
 }
 
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .topbar, footer, .legal-footer, .advertorials, main {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .advertorials {
+    flex-direction: column;
+    gap: 2em;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 1em;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+  }
+  .advertorials {
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em 0;
+  }
+  .cars {
+    flex-direction: column;
+    gap: 1.5em;
+  }
+  .car-details {
+    max-width: 100%;
+  }
+  main {
+    padding: 1em;
+  }
+  footer, .legal-footer {
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar, footer, .legal-footer, main {
+    padding: 0.5em;
+  }
+  h2, h3 {
+    font-size: 1.2em;
+  }
+  .advertorials, .cars {
+    gap: 0.5em;
+  }
+  .car-details {
+    padding: 0.5em;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */

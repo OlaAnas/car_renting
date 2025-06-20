@@ -43,7 +43,7 @@
         <ul>
             <li><a href="#">Privacy & Policy</a></li>
             <li><a href="#">Terms & Condition</a></li>
-            <li><a href="#" id="openLogin" class="button-primary">Inloggen</a></li>
+            
         </ul>
     </div>
 </div>
