@@ -1,38 +1,38 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
+if (session_status() === PHP_SESSION_NONE) { // Check if a session has not been started yet
+    session_start(); // Start the session
 }
 ?>
 
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="ISO-8859-1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rydr</title>
-    <link rel="stylesheet" href="/car_renting/assets/css/main.css">
-    <link rel="icon" type="image/png" href="/car_renting/assets/images/favicon.ico" sizes="32x32">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta charset="ISO-8859-1"> <!-- Set character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+    <title>Rydr</title> <!-- Page title -->
+    <link rel="stylesheet" href="/car_renting/assets/css/main.css"> <!-- Main CSS -->
+    <link rel="icon" type="image/png" href="/car_renting/assets/images/favicon.ico" sizes="32x32"> <!-- Favicon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconnect for Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-    <meta name="description" content="Rydr - Snel en eenvoudig een auto huren. Bekijk ons aanbod van huurauto's en bedrijfswagens.">
-    <meta name="keywords" content="auto huren, huurauto, bedrijfswagen, goedkoop, Rydr, autoverhuur, Rotterdam">
-    <meta name="robots" content="index, follow">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet"> <!-- Google Fonts -->
+    <meta name="description" content="Rydr - Snel en eenvoudig een auto huren. Bekijk ons aanbod van huurauto's en bedrijfswagens."> <!-- SEO description -->
+    <meta name="keywords" content="auto huren, huurauto, bedrijfswagen, goedkoop, Rydr, autoverhuur, Rotterdam"> <!-- SEO keywords -->
+    <meta name="robots" content="index, follow"> <!-- SEO robots -->
 </head>
 <body>
-<div class="topbar">
-    <div class="logo">
+<div class="topbar"> <!-- Top navigation bar -->
+    <div class="logo"> <!-- Logo section -->
         <a href="/car_renting/index.php">Rydr.</a>
     </div>
 
-    <form action="/car_renting/pages/ons-aanbod.php" method="get" style="display: flex; align-items: center; gap: 8px;">
-        <input type="search" name="brand" placeholder="Zoek op merk..." style="padding: 6px 10px; border-radius: 6px; border: 1px solid #ccc;">
+    <form action="/car_renting/pages/ons-aanbod.php" method="get"> <!-- Search form -->
+        <input type="search" name="brand" placeholder="Zoek op merk...">
         <button type="submit" style="background: none; border: none; cursor: pointer;">
-            <img src="/car_renting/assets/images/icons/search-normal.svg" alt="Zoek" class="search-icon" style="width: 22px; height: 22px;">
+            <img src="/car_renting/assets/images/icons/search-normal.svg" alt="Zoek" class="search-icon" >
         </button>
     </form>
 
-    <nav>
+    <nav> <!-- Main navigation links -->
         <ul>
             <li><a href="/car_renting/pages/home.php">Home</a></li>
             <li><a href="/car_renting/pages/ons-aanbod.php">Ons aanbod</a></li>
@@ -40,7 +40,7 @@ if (session_status() === PHP_SESSION_NONE) {
         </ul>
     </nav>
 
-  <div class="menu">
+  <div class="menu"> <!-- User menu/account dropdown -->
     <?php if (isset($_SESSION['id'])): ?>
         <div class="account" style="position: relative;">
             <img src="/car_renting/assets/images/profil.png" alt="Account" id="accountIcon"

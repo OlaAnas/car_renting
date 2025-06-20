@@ -1,13 +1,18 @@
-<?php require_once "../includes/header.php"; ?>
+<?php
+// Include the header for the page
+require_once "../includes/header.php"; ?>
 
 <main style="max-width: 800px; margin: 40px auto; padding: 30px;">
     <h2>Over ons</h2>
+    <!-- Introduction about the company -->
     <p>Welkom bij <strong>Rydr</strong> – hét platform voor het huren van auto's in Nederland. Wij maken autorijden simpel, flexibel en betaalbaar voor iedereen.</p>
     
     <h3>Onze Missie</h3>
+    <!-- Company mission statement -->
     <p>Wij geloven dat mobiliteit voor iedereen toegankelijk moet zijn. Of je nu een weekend weggaat of tijdelijk vervoer nodig hebt, Rydr biedt de juiste auto tegen een eerlijke prijs.</p>
     
     <h3>Waarom voor ons kiezen?</h3>
+    <!-- List of company advantages -->
     <ul>
         <li>Groot aanbod van moderne en betrouwbare voertuigen</li>
         <li>Transparante prijzen – geen verborgen kosten</li>
@@ -16,6 +21,7 @@
     </ul>
     
     <h3>Het Team</h3>
+    <!-- Team member profiles -->
     <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; margin-bottom: 40px;">
         <div style="text-align: center; max-width: 180px;">
             <img src="/car_renting/assets/images/team/brian-mensah.png" alt="Brian Mensah" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
@@ -40,7 +46,9 @@
     </div>
     
     <h3>Contact</h3>
+    <!-- Contact information -->
     <p>Heb je vragen of hulp nodig? Neem gerust contact met ons op via <a href="mailto:info@rydr.nl">info@rydr.nl</a>.</p>
 </main>
 
-<?php require_once "../includes/footer.php"; ?>
+<?php // Include the footer for the page
+require_once "../includes/footer.php"; ?>
