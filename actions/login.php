@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // الاستعلام عن المستخدم
-    $stmt = $conn->prepare("SELECT * FROM account WHERE email = :email");
+    $stmt = $pdo->prepare("SELECT * FROM account WHERE email = :email");
     $stmt->bindParam(":email", $email);
     $stmt->execute();
     $user = $stmt->fetch(PDO::FETCH_ASSOC);

@@ -21,7 +21,7 @@ if (!empty($_GET['max_price'])) {
     $params[':max_price'] = $_GET['max_price'];
 }
 
-$stmt = $conn->prepare($query);
+$stmt = $pdo->prepare($query);
 $stmt->execute($params);
 $cars = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>

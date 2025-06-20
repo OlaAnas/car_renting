@@ -10,7 +10,7 @@ if (!isset($_SESSION['id'])) {
 }
 
 // جلب معلومات المستخدم من القاعدة
-$stmt = $conn->prepare("SELECT * FROM account WHERE id = :id");
+$stmt = $pdo->prepare("SELECT * FROM account WHERE id = :id");
 $stmt->bindParam(":id", $_SESSION['id']);
 $stmt->execute();
 $user = $stmt->fetch(PDO::FETCH_ASSOC);

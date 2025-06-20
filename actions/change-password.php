@@ -28,7 +28,7 @@ if ($new !== $confirm) {
 }
 
 // 1. Controleer of het huidige wachtwoord correct is
-$stmt = $conn->prepare("SELECT password FROM account WHERE id = :id");
+$stmt = $pdo->prepare("SELECT password FROM account WHERE id = :id");
 $stmt->bindParam(":id", $user_id);
 $stmt->execute();
 $user = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -41,7 +41,7 @@ if (!$user || !password_verify($current, $user['password'])) {
 
 // 2. Controleer of het nieuwe wachtwoord sterk genoeg is
 $new_hashed = password_hash($new, PASSWORD_DEFAULT);
-$update = $conn->prepare("UPDATE account SET password = :pass WHERE id = :id");
+$update = $pdo->prepare("UPDATE account SET password = :pass WHERE id = :id");
 $update->bindParam(":pass", $new_hashed);
 $update->bindParam(":id", $user_id);
 $update->execute();

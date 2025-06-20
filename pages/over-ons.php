@@ -15,6 +15,30 @@
         <li>Uitstekende klantenservice</li>
     </ul>
     
+    <h3>Het Team</h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; margin-bottom: 40px;">
+        <div style="text-align: center; max-width: 180px;">
+            <img src="/car_renting/assets/images/team/brian-mensah.png" alt="Brian Mensah" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+            <h4>Brian Mensah</h4>
+            <p>CEO &amp; Oprichter</p>
+        </div>
+        <div style="text-align: center; max-width: 180px;">
+            <img src="/car_renting/assets/images/team/jasper-van-den-brink.png" alt="Jasper van den Brink" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+            <h4>Jasper van den Brink</h4>
+            <p>CTO</p>
+        </div>
+        <div style="text-align: center; max-width: 180px;">
+            <img src="/car_renting/assets/images/team/lotte-de-graaf.png" alt="Lotte de Graaf" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+            <h4>Lotte de Graaf</h4>
+            <p>Marketing</p>
+        </div>
+        <div style="text-align: center; max-width: 180px;">
+            <img src="/car_renting/assets/images/team/youssef-amrani.png" alt="Youssef Amrani" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+            <h4>Youssef Amrani</h4>
+            <p>Klantenservice</p>
+        </div>
+    </div>
+    
     <h3>Contact</h3>
     <p>Heb je vragen of hulp nodig? Neem gerust contact met ons op via <a href="mailto:info@rydr.nl">info@rydr.nl</a>.</p>
 </main>

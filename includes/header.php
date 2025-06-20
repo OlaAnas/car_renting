@@ -15,6 +15,9 @@ if (session_status() === PHP_SESSION_NONE) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <meta name="description" content="Rydr - Snel en eenvoudig een auto huren. Bekijk ons aanbod van huurauto's en bedrijfswagens.">
+    <meta name="keywords" content="auto huren, huurauto, bedrijfswagen, goedkoop, Rydr, autoverhuur, Rotterdam">
+    <meta name="robots" content="index, follow">
 </head>
 <body>
 <div class="topbar">
@@ -22,9 +25,11 @@ if (session_status() === PHP_SESSION_NONE) {
         <a href="/car_renting/index.php">Rydr.</a>
     </div>
 
-    <form action="">
-        <input type="search" placeholder="Welke auto wilt u huren?">
-        <img src="/car_renting/assets/images/icons/search-normal.svg" alt="" class="search-icon">
+    <form action="/car_renting/pages/ons-aanbod.php" method="get" style="display: flex; align-items: center; gap: 8px;">
+        <input type="search" name="brand" placeholder="Zoek op merk..." style="padding: 6px 10px; border-radius: 6px; border: 1px solid #ccc;">
+        <button type="submit" style="background: none; border: none; cursor: pointer;">
+            <img src="/car_renting/assets/images/icons/search-normal.svg" alt="Zoek" class="search-icon" style="width: 22px; height: 22px;">
+        </button>
     </form>
 
     <nav>

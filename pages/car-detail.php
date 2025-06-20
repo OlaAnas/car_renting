@@ -7,7 +7,7 @@ $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 $car = null;
 
 if ($id > 0) {
-    $stmt = $conn->prepare("SELECT * FROM car WHERE id = ?");
+    $stmt = $pdo->prepare("SELECT * FROM car WHERE id = ?");
     $stmt->execute([$id]);
     $car = $stmt->fetch(PDO::FETCH_ASSOC);
 }

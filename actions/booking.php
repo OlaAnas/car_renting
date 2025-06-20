@@ -29,7 +29,7 @@ if (strtotime($end_date) < strtotime($start_date)) {
 
 try {
     // تنفيذ الحجز
-    $stmt = $conn->prepare("INSERT INTO booking (account_id, car_id, start_date, end_date) VALUES (:account_id, :car_id, :start_date, :end_date)");
+    $stmt = $pdo->prepare("INSERT INTO booking (account_id, car_id, start_date, end_date) VALUES (:account_id, :car_id, :start_date, :end_date)");
     $stmt->bindParam(':account_id', $account_id);
     $stmt->bindParam(':car_id', $car_id);
     $stmt->bindParam(':start_date', $start_date);

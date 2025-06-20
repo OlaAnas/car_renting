@@ -15,17 +15,17 @@ $_SESSION['email'] = $email;
 
 if ($password === $confirm_password) {
     // تحقق من وجود الحساب مسبقًا
-    $check_account = $conn->prepare("SELECT * FROM account WHERE email = :email");
+    $check_account = $pdo->prepare("SELECT * FROM account WHERE email = :email");
     $check_account->bindParam(":email", $email);
     $check_account->execute();
 
     if ($check_account->rowCount() === 0) {
         // تشفير كلمة المرور
-        $options = ['cost' => 14];
+        $options = ['cost' => 10]; // Lowered cost for faster registration
         $encrypted_password = password_hash($password, PASSWORD_DEFAULT, $options);
 
         // إنشاء الحساب مع الحقول الإضافية
-        $create_account = $conn->prepare("
+        $create_account = $pdo->prepare("
             INSERT INTO account (full_name, email, phone, address, password) 
             VALUES (:full_name, :email, :phone, :address, :password)
         ");

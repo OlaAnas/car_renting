@@ -12,7 +12,7 @@ $full_name = trim($_POST['full_name']);
 $phone = trim($_POST['phone']);
 $address = trim($_POST['address']);
 
-$stmt = $conn->prepare("UPDATE account SET full_name = :full_name, phone = :phone, address = :address WHERE id = :id");
+$stmt = $pdo->prepare("UPDATE account SET full_name = :full_name, phone = :phone, address = :address WHERE id = :id");
 $stmt->bindParam(":full_name", $full_name);
 $stmt->bindParam(":phone", $phone);
 $stmt->bindParam(":address", $address);

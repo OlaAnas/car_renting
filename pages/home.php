@@ -3,7 +3,7 @@
 require_once __DIR__ . '/../database/connection.php';
 
 try {
-    $stmt = $conn->query("SELECT * FROM car LIMIT 8");
+    $stmt = $pdo->query("SELECT * FROM car LIMIT 8");
     $cars = $stmt->fetchAll(PDO::FETCH_ASSOC);
 } catch (Exception $e) {
     $cars = [];
@@ -14,7 +14,7 @@ try {
         <div class="advertorial">
             <h2>Hét platform om een auto te huren</h2>
             <p>Snel en eenvoudig een auto huren. Natuurlijk voor een lage prijs.</p>
-            <a href="#" class="button-primary">Huur nu een auto</a>
+            <a href="/car_renting/pages/ons-aanbod.php" class="button-primary">Huur nu een auto</a>
             <img src="/car_renting/assets/images/car-rent-header-image-1.png" alt="">
             <img src="/car_renting/assets/images/header-circle-background.svg" alt="" class="background-header-element">
         </div>
@@ -85,7 +85,7 @@ try {
     </div>
 
     <div class="show-more">
-        <a class="button-primary" href="#">Toon alle</a>
+        <a class="button-primary" href="/car_renting/pages/ons-aanbod.php">Toon alle</a>
     </div>
 </main>
 

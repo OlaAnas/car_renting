@@ -10,13 +10,13 @@ if (!isset($_SESSION['id'])) {
 // جلب معلومات المستخدم
 $user_id = $_SESSION['id'];
 $sql = "SELECT full_name, email, phone, address, created_at FROM account WHERE id = :id";
-$stmt = $conn->prepare($sql);
+$stmt = $pdo->prepare($sql);
 $stmt->bindParam(':id', $user_id);
 $stmt->execute();
 $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
 // جلب عدد الحجوزات للمستخدم
-$booking_stmt = $conn->prepare("SELECT COUNT(*) FROM booking WHERE account_id = :id");
+$booking_stmt = $pdo->prepare("SELECT COUNT(*) FROM booking WHERE account_id = :id");
 $booking_stmt->bindParam(':id', $user_id);
 $booking_stmt->execute();
 $booking_count = $booking_stmt->fetchColumn();
